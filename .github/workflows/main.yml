@@ -35,8 +35,7 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew assembledebug
       - name: Upload build Debug
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v1
         with:
          name: app
          path: app/build/outputs/apk/debug/app-debug.apk
-         if-no-files-found: error
