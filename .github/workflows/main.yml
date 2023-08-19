@@ -33,12 +33,10 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
       - name: Build with Gradle
-        run: ./gradlew packageDebugUniversalApk
-      - name: Rename the APK file
-        run: mv ./app/build/outputs/apk_from_bundle/debug/app-debug-universal.apk ./lol.apk
-      - name: Store generated APK file
+        run: ./gradlew assembledebug
+      - name: Upload build Debug
         uses: actions/upload-artifact@v3
-        with:
-          name: lol
-          path: ./lol.apk
-      
+       with:
+        name: app-debug
+        path: app/build/outputs/debug/
+        if-no-files-found: error
