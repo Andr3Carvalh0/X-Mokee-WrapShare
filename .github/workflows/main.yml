@@ -32,7 +32,7 @@ jobs:
           cache: 'gradle'
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
-     - name: Build with Gradle
+      - name: Build with Gradle
         run: ./gradlew packageDebugUniversalApk
       - name: Rename the APK file
         run: mv ./app/build/outputs/apk_from_bundle/debug/app-debug-universal.apk ./lol.apk
