@@ -18,8 +18,6 @@
 <resources>
 
     <style name="AppThemeBase" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="colorPrimary">@color/primary</item>
-        <item name="colorControlActivated">@color/primary</item>
         <item name="android:colorEdgeEffect">?colorControlHighlight</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:windowIsTranslucent">true</item>

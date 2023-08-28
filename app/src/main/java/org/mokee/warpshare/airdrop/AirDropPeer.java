@@ -64,28 +64,4 @@ public class AirDropPeer extends Peer {
 
         return new AirDropPeer(id, name, url, capabilities);
     }
-
-    public int getMokeeApiVersion() {
-        if (capabilities == null) {
-            return 0;
-        }
-
-        final JsonObject vendor = capabilities.getAsJsonObject("Vendor");
-        if (vendor == null) {
-            return 0;
-        }
-
-        final JsonObject mokee = vendor.getAsJsonObject("org.mokee");
-        if (mokee == null) {
-            return 0;
-        }
-
-        final JsonElement api = mokee.get("APIVersion");
-        if (api == null) {
-            return 0;
-        }
-
-        return api.getAsInt();
-    }
-
 }
